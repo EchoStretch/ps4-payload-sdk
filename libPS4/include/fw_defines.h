@@ -5,7 +5,7 @@
 
 // clang-format off
 
-// Used in every payload that uses jailbreak();
+// Used to find kernel base
 #define K300_XFAST_SYSCALL         0x0
 #define K310_XFAST_SYSCALL         0x0
 #define K311_XFAST_SYSCALL         0x0
@@ -70,6 +70,10 @@
 #define K1152_XFAST_SYSCALL        0x000001C0
 #define K1200_XFAST_SYSCALL        0x000001C0
 #define K1202_XFAST_SYSCALL        0x000001C0
+#define K1250_XFAST_SYSCALL        0x000001C0
+#define K1252_XFAST_SYSCALL        0x000001C0
+#define K1300_XFAST_SYSCALL        0x000001C0
+#define K1302_XFAST_SYSCALL        0x000001C0
 
 // Used in every payload that uses jailbreak();
 #define K300_PRISON_0              0x0
@@ -136,6 +140,10 @@
 #define K1152_PRISON_0             0x0111FA18
 #define K1200_PRISON_0             0x0111FA18
 #define K1202_PRISON_0             0x0111FA18
+#define K1250_PRISON_0             0x0111FA18
+#define K1252_PRISON_0             0x0111FA18
+#define K1300_PRISON_0             0x0111FA18
+#define K1302_PRISON_0             0x0111FA18
 
 // Used in every payload that uses jailbreak();
 #define K300_ROOTVNODE             0x0
@@ -202,6 +210,10 @@
 #define K1152_ROOTVNODE            0x02136E90
 #define K1200_ROOTVNODE            0x02136E90
 #define K1202_ROOTVNODE            0x02136E90
+#define K1250_ROOTVNODE            0x02136E90
+#define K1252_ROOTVNODE            0x02136E90
+#define K1300_ROOTVNODE            0x02136E90
+#define K1302_ROOTVNODE            0x02136E90
 
 // Used in Kernel Dumper
 #define K300_COPYOUT               0x0
@@ -268,6 +280,10 @@
 #define K1152_COPYOUT              0x002BD4A0
 #define K1200_COPYOUT              0x002BD580
 #define K1202_COPYOUT              0x002BD580
+#define K1250_COPYOUT              0x002BD5C0
+#define K1252_COPYOUT              0x002BD5C0
+#define K1300_COPYOUT              0x002BD5E0
+#define K1302_COPYOUT              0x002BD5F0
 
 // Used in Dumper, FTP, and Module Dumper
 #define K300_MMAP_SELF_1           0x0
@@ -334,6 +350,10 @@
 #define K1152_MMAP_SELF_1          0x003B2B00
 #define K1200_MMAP_SELF_1          0x003B2D40
 #define K1202_MMAP_SELF_1          0x003B2D40
+#define K1250_MMAP_SELF_1          0x003B2D80
+#define K1252_MMAP_SELF_1          0x003B2D80
+#define K1300_MMAP_SELF_1          0x003B2DA0
+#define K1302_MMAP_SELF_1          0x003B2DB0
 
 // Used in Dumper, FTP, and Module Dumper
 #define K300_MMAP_SELF_2           0x0
@@ -400,6 +420,10 @@
 #define K1152_MMAP_SELF_2          0x003B2B20
 #define K1200_MMAP_SELF_2          0x003B2D60
 #define K1202_MMAP_SELF_2          0x003B2D60
+#define K1250_MMAP_SELF_2          0x003B2DA0
+#define K1252_MMAP_SELF_2          0x003B2DA0
+#define K1300_MMAP_SELF_2          0x003B2DC0
+#define K1302_MMAP_SELF_2          0x003B2DD0
 
 // Used in Module Dumper, App Dumper, and FTP
 #define K300_MMAP_SELF_3           0x0
@@ -466,6 +490,10 @@
 #define K1152_MMAP_SELF_3          0x001FC361
 #define K1200_MMAP_SELF_3          0x001FC441
 #define K1202_MMAP_SELF_3          0x001FC441
+#define K1250_MMAP_SELF_3          0x001FC481
+#define K1252_MMAP_SELF_3          0x001FC481
+#define K1300_MMAP_SELF_3          0x001FC4A1
+#define K1302_MMAP_SELF_3          0x001FC4B1
 
 // Used in Disable ASLR
 // May also require changes to the `kpayload_aslr` function in `payload_utils.c`
@@ -504,7 +532,7 @@
 #define K651_DISABLE_ASLR          0x003CE931
 #define K670_DISABLE_ASLR          0x003CECE1
 #define K671_DISABLE_ASLR          0x003CECE1
-#define K672_DISABLE_ASLR          0x003CEC8A
+#define K672_DISABLE_ASLR          0x003CECE1
 #define K700_DISABLE_ASLR          0x000C1F9A
 #define K701_DISABLE_ASLR          0x000C1F9A
 #define K702_DISABLE_ASLR          0x000C1F9A
@@ -533,6 +561,10 @@
 #define K1152_DISABLE_ASLR         0x00477A14
 #define K1200_DISABLE_ASLR         0x00477C54
 #define K1202_DISABLE_ASLR         0x00477C54
+#define K1250_DISABLE_ASLR         0x00477C94
+#define K1252_DISABLE_ASLR         0x00477C94
+#define K1300_DISABLE_ASLR         0x00477CB4
+#define K1302_DISABLE_ASLR         0x00477CC4
 
 // Used in Enable Browser
 #define K300_REG_MGR_SET_INT       0x0
@@ -599,6 +631,10 @@
 #define K1152_REG_MGR_SET_INT      0x004E81D0
 #define K1200_REG_MGR_SET_INT      0x004E8410
 #define K1202_REG_MGR_SET_INT      0x004E8410
+#define K1250_REG_MGR_SET_INT      0x004E8450
+#define K1252_REG_MGR_SET_INT      0x004E8450
+#define K1300_REG_MGR_SET_INT      0x004E8470
+#define K1302_REG_MGR_SET_INT      0x004E8480
 
 // Used in Kernel Clock
 #define K300_SET_TIME              0x0
@@ -661,10 +697,14 @@
 #define K1071_SET_TIME             0x00633CF0 // Needs Verified
 #define K1100_SET_TIME             0x006332E0 // Needs Verified
 #define K1102_SET_TIME             0x00633280 // Needs Verified
-#define K1150_SET_TIME             0x00634720 // Needs Verified
-#define K1152_SET_TIME             0x00634720 // Needs Verified
+#define K1150_SET_TIME             0x00634710 // Needs Verified
+#define K1152_SET_TIME             0x00634710 // Needs Verified
 #define K1200_SET_TIME             0x00634950 // Needs Verified
 #define K1202_SET_TIME             0x00634950 // Needs Verified
+#define K1250_SET_TIME             0x00634990 // Needs Verified
+#define K1252_SET_TIME             0x00634990 // Needs Verified
+#define K1300_SET_TIME             0x006349E0 // Needs Verified
+#define K1302_SET_TIME             0x006349E0 // Needs Verified
 
 // Used in Kernel Clock
 #define K300_CLEAR_TIME_DIFFERENCE  0x00000000 // Needs Verified
@@ -731,6 +771,10 @@
 #define K1152_CLEAR_TIME_DIFFERENCE 0x00633BF0
 #define K1200_CLEAR_TIME_DIFFERENCE 0x00633E30
 #define K1202_CLEAR_TIME_DIFFERENCE 0x00633E30
+#define K1250_CLEAR_TIME_DIFFERENCE 0x00633E70
+#define K1252_CLEAR_TIME_DIFFERENCE 0x00633E70
+#define K1300_CLEAR_TIME_DIFFERENCE 0x00633EC0
+#define K1302_CLEAR_TIME_DIFFERENCE 0x00633EC0
 
 // Used in ToDex
 #define K300_TARGET_ID             0x0
@@ -797,6 +841,10 @@
 #define K1152_TARGET_ID            0x021CC60D
 #define K1200_TARGET_ID            0x021CC60D
 #define K1202_TARGET_ID            0x021CC60D
+#define K1250_TARGET_ID            0x021CC60D
+#define K1252_TARGET_ID            0x021CC60D
+#define K1300_TARGET_ID            0x021CC60D
+#define K1302_TARGET_ID            0x021CC60D
 
 // Used in Perm UART
 #define K300_ICC_NVS_WRITE         0x0
@@ -863,6 +911,10 @@
 #define K1152_ICC_NVS_WRITE        0x000A5A10
 #define K1200_ICC_NVS_WRITE        0x000A5A10
 #define K1202_ICC_NVS_WRITE        0x000A5A10
+#define K1250_ICC_NVS_WRITE        0x000A5A10
+#define K1252_ICC_NVS_WRITE        0x000A5A10
+#define K1300_ICC_NVS_WRITE        0x000A5A10
+#define K1302_ICC_NVS_WRITE        0x000A5A10
 
 #define K300_NPDRM_OPEN            0x0
 #define K310_NPDRM_OPEN            0x0
@@ -928,6 +980,10 @@
 #define K1152_NPDRM_OPEN           0x0064D390
 #define K1200_NPDRM_OPEN           0x0064D5D0
 #define K1202_NPDRM_OPEN           0x0064D5D0
+#define K1250_NPDRM_OPEN           0x0064D670
+#define K1252_NPDRM_OPEN           0x0064D670
+#define K1300_NPDRM_OPEN           0x0064D6C0
+#define K1302_NPDRM_OPEN           0x0064D6C0
 
 #define K300_NPDRM_CLOSE           0x0
 #define K310_NPDRM_CLOSE           0x0
@@ -989,10 +1045,14 @@
 #define K1071_NPDRM_CLOSE          0x0064C990
 #define K1100_NPDRM_CLOSE          0x0064E340
 #define K1102_NPDRM_CLOSE          0x0064E2E0
-#define K1150_NPDRM_CLOSE          0x0064D3C0
-#define K1152_NPDRM_CLOSE          0x0064D3C0
+#define K1150_NPDRM_CLOSE          0x0064D3B0
+#define K1152_NPDRM_CLOSE          0x0064D3B0
 #define K1200_NPDRM_CLOSE          0x0064D5F0
 #define K1202_NPDRM_CLOSE          0x0064D5F0
+#define K1250_NPDRM_CLOSE          0x0064D690
+#define K1252_NPDRM_CLOSE          0x0064D690
+#define K1300_NPDRM_CLOSE          0x0064D6E0
+#define K1302_NPDRM_CLOSE          0x0064D6E0
 
 #define K300_NPDRM_IOCTL           0x0
 #define K310_NPDRM_IOCTL           0x0
@@ -1058,6 +1118,79 @@
 #define K1152_NPDRM_IOCTL          0x0064D407
 #define K1200_NPDRM_IOCTL          0x0064D647
 #define K1202_NPDRM_IOCTL          0x0064D647
+#define K1250_NPDRM_IOCTL          0x0064D6E7
+#define K1252_NPDRM_IOCTL          0x0064D6E7
+#define K1300_NPDRM_IOCTL          0x0064D737
+#define K1302_NPDRM_IOCTL          0x0064D737
+
+#define K300_NO_BD_PATCH  0x0
+#define K310_NO_BD_PATCH  0x0
+#define K311_NO_BD_PATCH  0x0
+#define K315_NO_BD_PATCH  0x0
+#define K350_NO_BD_PATCH  0x0
+#define K355_NO_BD_PATCH  0x0
+#define K370_NO_BD_PATCH  0x0
+#define K400_NO_BD_PATCH  0x0
+#define K401_NO_BD_PATCH  0x0
+#define K405_NO_BD_PATCH  0x0
+#define K406_NO_BD_PATCH  0x0
+#define K407_NO_BD_PATCH  0x0
+#define K450_NO_BD_PATCH  0x0
+#define K455_NO_BD_PATCH  0x0
+#define K470_NO_BD_PATCH  0x0
+#define K471_NO_BD_PATCH  0x0
+#define K472_NO_BD_PATCH  0x0
+#define K473_NO_BD_PATCH  0x0
+#define K474_NO_BD_PATCH  0x0030D529
+#define K500_NO_BD_PATCH  0x00218E52
+#define K501_NO_BD_PATCH  0x00218E52
+#define K503_NO_BD_PATCH  0x00218F62
+#define K505_NO_BD_PATCH  0x00218F62
+#define K507_NO_BD_PATCH  0x00218F62
+#define K550_NO_BD_PATCH  0x003D5E62
+#define K553_NO_BD_PATCH  0x003D5D62
+#define K555_NO_BD_PATCH  0x003D6122
+#define K556_NO_BD_PATCH  0x00396EA2
+#define K600_NO_BD_PATCH  0x00396EA2
+#define K602_NO_BD_PATCH  0x00396EA2
+#define K620_NO_BD_PATCH  0x00396EC2
+#define K650_NO_BD_PATCH  0x002033F2
+#define K651_NO_BD_PATCH  0x002033F2
+#define K670_NO_BD_PATCH  0x002037A2
+#define K671_NO_BD_PATCH  0x002037A2
+#define K672_NO_BD_PATCH  0x002037A2
+#define K700_NO_BD_PATCH  0x0019F883
+#define K701_NO_BD_PATCH  0x0019F883
+#define K702_NO_BD_PATCH  0x0019F883
+#define K750_NO_BD_PATCH  0x00435403
+#define K751_NO_BD_PATCH  0x00435403
+#define K755_NO_BD_PATCH  0x00435403
+#define K800_NO_BD_PATCH  0x0027DEB3
+#define K801_NO_BD_PATCH  0x0027DEB3
+#define K803_NO_BD_PATCH  0x0027DEB3
+#define K850_NO_BD_PATCH  0x00387863
+#define K852_NO_BD_PATCH  0x00387863
+#define K900_NO_BD_PATCH  0x00053683
+#define K903_NO_BD_PATCH  0x00053683
+#define K904_NO_BD_PATCH  0x00053683
+#define K950_NO_BD_PATCH  0x000A1033
+#define K951_NO_BD_PATCH  0x000A1033
+#define K960_NO_BD_PATCH  0x000A1033
+#define K1000_NO_BD_PATCH 0x0046AFE3
+#define K1001_NO_BD_PATCH 0x0046AFE3
+#define K1050_NO_BD_PATCH 0x003E11F3
+#define K1070_NO_BD_PATCH 0x003E11F3
+#define K1071_NO_BD_PATCH 0x003E11F3
+#define K1100_NO_BD_PATCH 0x0033E813
+#define K1102_NO_BD_PATCH 0x0033E833
+#define K1150_NO_BD_PATCH 0x001D5D83
+#define K1152_NO_BD_PATCH 0x001D5D83
+#define K1200_NO_BD_PATCH 0x001D5D83
+#define K1202_NO_BD_PATCH 0x001D5D83
+#define K1250_NO_BD_PATCH 0x001D5DC3
+#define K1252_NO_BD_PATCH 0x001D5DC3
+#define K1300_NO_BD_PATCH 0x001D5DE3
+#define K1302_NO_BD_PATCH 0x001D5DF3
 
 // clang-format on
 
